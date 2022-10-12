@@ -5,12 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: cben-bar <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/07/25 16:29:49 by cben-bar          #+#    #+#             */
-<<<<<<< HEAD
-/*   Updated: 2022/07/27 14:23:29 by cben-bar         ###   ########lyon.fr   */
-=======
-/*   Updated: 2022/07/26 18:44:24 by cben-bar         ###   ########.fr       */
->>>>>>> 7fa03f186796a0d39759973afb5a14f9ebf0fd2f
+/*   Created: 2022/10/12 17:33:18 by cben-bar          #+#    #+#             */
+/*   Updated: 2022/10/12 17:34:26 by cben-bar         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -73,21 +69,12 @@ t_bool	ft_eating(t_philo *philo)
 	pthread_mutex_unlock(&philo->fork->mutex);
 	pthread_mutex_unlock(&philo->next->fork->mutex);
 	philo->must_eat++;
-<<<<<<< HEAD
-//	if (philo->must_eat == philo->params->nb_each_philo_must_eat)
-//	{
-//		pthread_mutex_lock(&philo->params->really_eat);
-//		philo->params->nb_really_eat++;
-//		pthread_mutex_unlock(&philo->params->really_eat);
-//	}
-=======
 	if (philo->must_eat == philo->params->nb_each_philo_must_eat)
 	{
 		pthread_mutex_lock(&philo->params->really_eat);
 		philo->params->nb_really_eat++;
 		pthread_mutex_unlock(&philo->params->really_eat);
 	}
->>>>>>> 7fa03f186796a0d39759973afb5a14f9ebf0fd2f
 	return (true);
 }
 

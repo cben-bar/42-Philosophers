@@ -5,12 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: cben-bar <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/07/20 14:19:55 by cben-bar          #+#    #+#             */
-<<<<<<< HEAD
-/*   Updated: 2022/07/27 14:26:29 by cben-bar         ###   ########lyon.fr   */
-=======
-/*   Updated: 2022/07/26 18:44:51 by cben-bar         ###   ########.fr       */
->>>>>>> 7fa03f186796a0d39759973afb5a14f9ebf0fd2f
+/*   Created: 2022/10/12 17:35:08 by cben-bar          #+#    #+#             */
+/*   Updated: 2022/10/12 17:35:12 by cben-bar         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,12 +37,6 @@ t_bool	kaputt(t_philo *philo)
 		return (true);
 	}
 	pthread_mutex_lock(&philo->params->really_eat);
-//	if (philo->params->nb_really_eat == philo->params->nb_philo)
-//	{
-//		pthread_mutex_unlock(&philo->params->death);
-//		pthread_mutex_unlock(&philo->params->really_eat);
-//		return (true);
-//	}
 	pthread_mutex_unlock(&philo->params->really_eat);
 	if (ft_time(philo) - philo->last_meal >= philo->params->time_to_die)
 	{
